@@ -1,70 +1,170 @@
-# Getting Started with Create React App
+# Voilà Fashion 🛍️
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern, fully responsive clothing e-commerce web application built with **React** and **Vite**. Features a luxury editorial aesthetic, complete shopping experience, and mobile-first design.
 
-## Available Scripts
+![Voilà Fashion](https://images.unsplash.com/photo-1469334031218-e382a71b716b?w=1200&q=80)
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## ✨ Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### 🏠 Homepage
+- Auto-sliding hero banner with 3 collection slides
+- Animated marquee announcement strip
+- Featured collections — Women, Men, Kids
+- Trending products grid
+- Seasonal offer cards with promo codes
+- Newsletter subscription section
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### 🗂️ Product Listing Page
+- Filter by **Size**, **Price Range**, and **Color**
+- Sort by Popularity, Price (Low–High / High–Low), and Rating
+- Mobile-friendly collapsible filter drawer
+- Live product count
 
-### `npm test`
+### 📦 Product Detail Page
+- High-quality product image with badge labels
+- Color swatch selector & size picker
+- Quantity control with Add to Cart
+- Wishlist toggle (heart icon)
+- Description / Details / Care tabs
+- Customer reviews section
+- Related products carousel
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 🛒 Shopping Cart
+- Full line-item management (add, remove, update qty)
+- Promo code input field
+- Live order summary — subtotal, GST (5%), shipping
+- Free shipping threshold nudge (above ₹999)
+- Proceed to Checkout button
 
-### `npm run build`
+### 👤 Account Page
+- Toggle between **Sign In** and **Register** forms
+- Clean, minimal auth UI
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### 🔍 Search
+- Inline search bar in Navbar
+- Live filter across all products by name
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### 📱 Fully Responsive
+- Mobile navigation hamburger menu
+- Responsive grid layouts for all screen sizes
+- Sticky navbar with backdrop blur
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## 🛠️ Tech Stack
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+| Layer | Technology |
+|---|---|
+| Framework | React 18 |
+| Build Tool | Vite 5 |
+| State Management | React Context API |
+| Styling | Inline CSS + CSS Variables |
+| Typography | Cormorant Garamond (Google Fonts) |
+| Data | Static JS data (easily swappable with API) |
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## 📁 Project Structure
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```
+voila-fashion/
+├── index.html                  # Entry HTML with Google Fonts
+├── vite.config.js              # Vite configuration
+├── package.json
+└── src/
+    ├── main.jsx                # React root mount
+    ├── App.jsx                 # Page router & layout
+    ├── context/
+    │   └── CartContext.jsx     # Global cart, wishlist, search state
+    ├── data/
+    │   └── products.js         # Product catalog, collections, offers
+    └── components/
+        ├── Navbar.jsx          # Sticky nav with search, cart, mobile menu
+        ├── HomePage.jsx        # Hero, collections, trending, offers
+        ├── ListingPage.jsx     # Product grid with filters & sorting
+        ├── ProductCard.jsx     # Reusable product card component
+        ├── ProductPage.jsx     # Full product detail page
+        ├── CartPage.jsx        # Shopping cart & order summary
+        └── Footer.jsx          # Footer + Account/Login page
+```
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 🚀 Getting Started
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Prerequisites
+- Node.js **18+**
+- npm or yarn
 
-### Code Splitting
+### Installation
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```bash
+# 1. Clone the repository
+git clone https://github.com/YOUR_USERNAME/voila-fashion.git
 
-### Analyzing the Bundle Size
+# 2. Navigate into the project
+cd voila-fashion
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+# 3. Install dependencies
+npm install
 
-### Making a Progressive Web App
+# 4. Start the development server
+npm run dev
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Open [http://localhost:5173](http://localhost:5173) in your browser.
 
-### Advanced Configuration
+### Build for Production
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+```bash
+npm run build
+```
 
-### Deployment
+The optimized output will be in the `dist/` folder.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+### Preview Production Build
 
-### `npm run build` fails to minify
+```bash
+npm run preview
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
+
+## 🎨 Design System
+
+| Token | Value | Usage |
+|---|---|---|
+| Primary Font | Cormorant Garamond | Headings, brand name |
+| Body Font | System sans-serif | Labels, prices, UI text |
+| Brand Gold | `#C4A882` | Accents, CTAs, badges |
+| Deep Charcoal | `#1A1A1A` | Primary text, buttons |
+| Warm Ivory | `#F9F7F4` | Backgrounds, cards |
+| Navy | `#1E3A5F` | Men's accent |
+| Coral | `#F87171` | Kids accent, sale badges |
+
+---
+
+## 🛒 Product Catalog
+
+The app ships with **12 sample products** across 3 categories:
+
+| Category | Products |
+|---|---|
+| 👗 Women | Linen Oversized Shirt, Cotton Sundress, Floral Midi Skirt, Wrap Maxi Dress, Lace-Trim Blouse |
+| 👔 Men | Slim Tapered Trousers, Classic Oxford Shirt, Merino Crew Sweater, Tailored Blazer |
+| 👧 Kids | Denim Jacket, Summer Set, Hoodie Sweatshirt |
+
+---
+
+
+## 🙌 Credits
+
+- Product images: [Unsplash](https://unsplash.com)
+- Font: [Cormorant Garamond](https://fonts.google.com/specimen/Cormorant+Garamond) via Google Fonts
+- Built with ❤️ using React + Vite
+
+---
+
+> **Voilà** — Curated fashion for every occasion. Crafted with care, delivered with love.
